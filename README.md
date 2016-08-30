@@ -2,6 +2,21 @@
 
 compute linear and nonlinear tuning curves
 
-```python
-  print("This is apparently the only way to get color in markdown files on Github.)
-```
+## install
+
+use pip
+
+## example
+
+from tuning import estimate_from_array
+
+X = 1
+y = 2
+
+b, r2 = estimate_from_array(X, y)
+
+print('b:%s' % b)
+print('r2:%s' % r2)
+
+
+## describe
