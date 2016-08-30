@@ -1,35 +1,51 @@
-# alex's version
-
-from tuning import estimate_from_file
 from tuning import estimate_from_array
 
-b, r2 = estimate_from_file('file1.csv', 'file2.csv')
+X = 1
+y = 2
 
 b, r2 = estimate_from_array(X, y)
 
-# pandas version
+print('b:%s' % b)
+print('r2:%s' % r2)
 
-from tuning import estimate
+# # reza's version
 
-b, r2 = estimate('file1.csv', 'file2.csv')
+# from tuning import estimate
 
-# numpy version
+# b, r2 = estimate(X, y)
+# b, r2 = estimate('file1.csv', 'file2.csv')
 
-from tuning import estimate
-from pandas import read_csv
+# # daniel's version
 
-X = read_csv('file1.csv')
-y = read_csv('file2.csv')
+# from tuning import estimate, convert
 
-b, r2 = estimate(X, y)
+# X, y = convert('file1.csv', 'file2.csv')
+# b, r2 = estimate(X, y)
 
-# from numpy import loadtxt, corrcoef
+# alex's version
+# # pandas version
 
-# X = loadtxt('test/resources/X.csv', delimiter=',')
-# y = loadtxt('test/resources/y.csv', delimiter=',')
+# from tuning import estimate
 
-#algorithm = LinearNonlinear(penalty='lasso', alpha=0, delay=0)
+# b, r2 = estimate('file1.csv', 'file2.csv')
 
-#model = algorithm.fit(X, y)
+# # freeman's version
 
-#model.predict(X)
+# from tuning import estimate
+# from pandas import read_csv
+
+# X = read_csv('file1.csv')
+# y = read_csv('file2.csv')
+
+# b, r2 = estimate(X, y)
+
+# # from numpy import loadtxt, corrcoef
+
+# # X = loadtxt('test/resources/X.csv', delimiter=',')
+# # y = loadtxt('test/resources/y.csv', delimiter=',')
+
+# #algorithm = LinearNonlinear(penalty='lasso', alpha=0, delay=0)
+
+# #model = algorithm.fit(X, y)
+
+# #model.predict(X)
